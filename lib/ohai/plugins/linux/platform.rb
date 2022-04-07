@@ -23,7 +23,7 @@ Ohai.plugin(:Platform) do
 
   # @deprecated
   def get_redhatish_platform(contents)
-    contents[/^Red Hat/i] ? "redhat" : contents[/(\w+)/i, 1].downcase
+    contents[/^Red Hat|^Rocky/i] ? "redhat" : contents[/(\w+)/i, 1].downcase
   end
 
   # See https://rubular.com/r/78c1yXYa7zDhdV for example matches
